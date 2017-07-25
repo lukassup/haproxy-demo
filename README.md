@@ -1,5 +1,23 @@
 # HAProxy Vagrant demo
 
+```
+                   +
+                   | http/https
+                   |
+       +-----------+-----------+
+       |                       |
+       |      HA proxy         |
+       |                       |
+       +------+-----------+----+
+  http/https  |           | http/https
++-------------+---+   +---+--------------+
+|                 |   |                  |
+|      httpd      |   |      httpd       |
+|                 |   |                  |
++-----------------+   +------------------+
+```
+(graph created with [asciiflow](http://asciiflow.com/))
+
 This demo features a HAProxy HTTP load balancer and two Apache httpd servers on CentOS 7.
 
 Virtualization: libvirt / KVM
